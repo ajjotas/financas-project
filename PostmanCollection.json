@@ -1,0 +1,172 @@
+{
+	"info": {
+		"_postman_id": "debd9437-8dba-4a56-a345-869d956d9805",
+		"name": "Finanças",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "simulacaoCredito (apenas valor_emprestimo)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"valor_emprestimo\": 300\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/credito/simulacaoCredito",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"credito",
+						"simulacaoCredito"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "simulacaoCredito (filtro instituição)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"valor_emprestimo\": 2.50,\r\n    \"instituicoes\": [\"BMG\"]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/credito/simulacaoCredito",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"credito",
+						"simulacaoCredito"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "simulacaoCredito (filtro convênios)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"valor_emprestimo\": 2.50,\r\n    \"convenios\": [\"INSS\"]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/credito/simulacaoCredito",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"credito",
+						"simulacaoCredito"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "simulacaoCredito (filtro parcela)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"valor_emprestimo\": 2.50,\r\n    \"parcela\": 60\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/credito/simulacaoCredito",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"credito",
+						"simulacaoCredito"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "simulacaoCredito (todos filtros)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"valor_emprestimo\": 2.50,\r\n    \"convenios\": [\"INSS\"],\r\n    \"instituicoes\": [\"BMG\"],\r\n    \"parcela\": 60    \r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/credito/simulacaoCredito",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"credito",
+						"simulacaoCredito"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "recuperaInstituicoes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "recuperaConvenios",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		}
+	]
+}
